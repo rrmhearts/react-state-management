@@ -4,19 +4,12 @@ import { Context } from "../context/context";
 
 export default function ContactTable() {
   // Subscribe to `contacts` state and access dispatch function
-  const [state, dispatch] = useContext(Context);
+  const { state, actions } = useContext(Context);
   // Declare a local state to be used internally by this component
   const [selectedId, setSelectedId] = useState();
 
-  const delContact = id => {
-    dispatch({
-      type: "DEL_CONTACT",
-      payload: id
-    });
-  };
-
   const onRemoveUser = () => {
-    delContact(selectedId);
+    actions.delContact(selectedId);
     setSelectedId(null); // Clear selection
   };
 

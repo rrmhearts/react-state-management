@@ -3,7 +3,7 @@ import { Statistic } from "semantic-ui-react";
 import { Context } from "../context/context";
 
 export default function CounterDisplay() {
-  const [state,] = useContext(Context);
+  const { state } = useContext(Context);
 
   return (
     <Statistic>

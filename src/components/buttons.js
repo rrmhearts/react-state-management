@@ -3,27 +3,15 @@ import { Button } from "semantic-ui-react";
 import { Context } from "../context/context";
 
 export default function CounterButtons() {
-  const [, dispatch] = useContext(Context);
-
-  const increment = () => {
-    dispatch({
-      type: 'INCREMENT_COUNTER'
-    });
-  };
-
-  const decrement = () => {
-    dispatch({
-      type: 'DECREMENT_COUNTER'
-    });
-  };
+  const { actions } = useContext(Context);
 
   return (
     <div>
       <Button.Group>
-        <Button color="green" onClick={increment}>
+        <Button color="green" onClick={actions.increment}>
           Add
         </Button>
-        <Button color="red" onClick={decrement}>
+        <Button color="red" onClick={actions.decrement}>
           Minus
         </Button>
       </Button.Group>
