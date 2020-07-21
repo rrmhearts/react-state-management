@@ -1,3 +1,6 @@
+# React Context Example
+This project provides a complete example of React context replacing Redux. Context is used broken up into actions, context and reducers. All state updates occur through actions / reducer just like in Redux. Enjoy!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
