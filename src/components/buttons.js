@@ -1,16 +1,20 @@
 import React, { useContext } from "react";
 import { Button } from "semantic-ui-react";
-import { CounterContext } from "../context/counter-context";
+import { Context } from "../context/context";
 
 export default function CounterButtons() {
-  const [count, setCount] = useContext(CounterContext);
+  const [, dispatch] = useContext(Context);
 
   const increment = () => {
-    setCount(count + 1);
+    dispatch({
+      type: 'INCREMENT_COUNTER'
+    });
   };
 
   const decrement = () => {
-    setCount(count - 1);
+    dispatch({
+      type: 'DECREMENT_COUNTER'
+    });
   };
 
   return (

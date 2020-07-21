@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Segment, Form, Input, Button } from "semantic-ui-react";
 import _ from "lodash";
-import { ContactContext } from "../context/contact-context";
+import { Context } from "../context/context";
 
 export default function ContactForm() {
   const name = useFormInput("");
   const email = useFormInput("");
   // eslint-disable-next-line no-unused-vars
-  const [state, dispatch] = useContext(ContactContext);
+  const [state, dispatch] = useContext(Context);
 
   const onSubmit = () => {
     dispatch({
