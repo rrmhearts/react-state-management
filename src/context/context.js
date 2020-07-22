@@ -13,6 +13,8 @@ const ContextProvider = props => {
   useEffect(() => console.log({ newState: state }),[state]);
 
   return (
+    // THIS WILL re-render EVERY CONSUMER component on state change
+    // That is why we use hooks in each component, re-render triggers state update..
     <Context.Provider value={{state, actions}}>
       {props.children}
     </Context.Provider>

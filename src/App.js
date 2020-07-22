@@ -1,9 +1,9 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
-import { Segment, Header } from "semantic-ui-react";
+import { Container, Segment, Header } from "semantic-ui-react";
+import { ContextProvider } from "./context/context";
+
 import ContactForm from "./components/form";
 import ContactTable from "./components/table";
-import { ContextProvider } from "./context/context";
 import CounterDisplay from "./components/display";
 import CounterButtons from "./components/buttons";
 
