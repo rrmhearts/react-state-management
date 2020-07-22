@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Statistic } from "semantic-ui-react";
-import { Context } from "../context/context";
+import { useSweetState } from "../store/store";
 
 export default function CounterDisplay() {
-  const { state } = useContext(Context);
+  const [ state ] = useSweetState();
 
   return (
     <Statistic>

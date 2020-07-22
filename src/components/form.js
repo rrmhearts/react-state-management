@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Segment, Form, Input, Button } from "semantic-ui-react";
-import { Context } from "../context/context";
+import { useSweetState } from "../store/store";
 
 export default function ContactForm() {
   const name = useFormInput("");
   const email = useFormInput("");
   // eslint-disable-next-line no-unused-vars
-  const { actions } = useContext(Context);
+  const [ state, actions ] = useSweetState();
 
   const onSubmit = () => {
     actions.addContact(name.value, email.value);

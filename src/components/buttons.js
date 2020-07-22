@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button } from "semantic-ui-react";
-import { Context } from "../context/context";
+import { useSweetState } from "../store/store";
 
 export default function CounterButtons() {
-  const { actions } = useContext(Context);
+  const [, actions ] = useSweetState();
 
   return (
     <div>

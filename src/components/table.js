@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Segment, Table, Button, Icon } from "semantic-ui-react";
-import { Context } from "../context/context";
+import { useSweetState } from "../store/store";
 
 export default function ContactTable() {
   // Subscribe to `contacts` state and access dispatch function
-  const { state, actions } = useContext(Context);
+  const [ state, actions ] = useSweetState();
   // Declare a local state to be used internally by this component
   const [selectedId, setSelectedId] = useState();
 
